@@ -2,12 +2,15 @@
 url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&family=Space+Grotesk&display=swap');
 
 :root{
-    --background: #ed1a3b;
+    --primary-color: #ed1a3b;
 }
 
 
+/********** HEADER / NAV BAR STYLES  **************************/
+
+
 header {
-    background: var(--background);
+    background: var(--primary-color);
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -15,12 +18,47 @@ header {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+  /********** HEADER / NAV BAR FUNCTIONALITY  **************************/
+
+  .nav-toggle {
+    display: none;
+  }
+
+.nav-toggle-label {
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-left: 1em;
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    
+ }
+ 
+ .nav-toggle-label span::before
+.nav-toggle-label span::after{
+    content: '';
+}
+
+
 nav{
     position: absolute;
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: var(--primary-color);
+    width: 100%;
+    display: none;
 }
 
 nav ul {
@@ -36,10 +74,12 @@ nav li {
 
 nav a {
     color: white;
+    text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
 
-nav a: hover {
+nav a:hover {
+    color: #3c3b6e;
+  }
 
-}
