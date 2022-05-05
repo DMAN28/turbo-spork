@@ -6,12 +6,19 @@
 *, *::before, *::after {
     box-sizing: border-box;
   }
+
+ 
   
   body {
       margin: 0;
       background: white;
       font-family: 'Work Sans', sans-serif;
       font-weight: 400;
+      min-height: 100vh;
+
+
+      display: flex;
+      flex-direction: column;
   }
 
 /********** HEADER / NAV BAR STYLES  **************************/
@@ -24,13 +31,16 @@ header {
     z-index: 999;
     width: 100%;
     font-family: 'Space Grotesk', sans-serif;
-    margin: -2% 0 30px 0;
+    margin: 0% 0 30px 0;
     padding: 5px 0 0 0;
     width: 100%;
 }
 
 header h1 {
+    color: white;
+    text-decoration: none;
     font-size: 1.5rem;
+    text-transform: uppercase;
     
 }
 
@@ -193,3 +203,21 @@ nav a:hover {
         transform: scale(1, 1);
     }
 }
+
+/********** FOOTER STYLES  **************************/
+
+footer {
+    background: var(--primary-color);
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+  }
+
+ footer h2 {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+ }
