@@ -3,23 +3,27 @@
     --secondary-color: #3c3b6e;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
+}
 
- 
-  
-  body {
-      margin: 0;
-      background: white;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      min-height: 100vh;
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-      display: flex;
-      flex-direction: column;
-  }
+body {
+    margin: 0;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /********** HEADER / NAV BAR STYLES  **************************/
 
@@ -41,14 +45,10 @@ header h1 {
     text-decoration: none;
     font-size: 1.5rem;
     text-transform: uppercase;
-    
-}
-
-img { 
-    max-width: 80px;
-    max-height: 50px;
 
 }
+
+
 
 /********** HEADER / NAV BAR FUNCTIONALITY  **************************/
 
@@ -81,7 +81,7 @@ img {
     width: 2em;
     border-radius: 2px;
     position: relative;
-} 
+}
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -215,9 +215,34 @@ footer {
     width: 100%;
     font-family: 'Space Grotesk', sans-serif;
     margin-top: auto;
-  }
+}
 
- footer h2 {
+footer h2 {
     color: white;
     font-size: 1rem;
- }
+}
+
+
+
+/********** Driver profile STYLES  **************************/
+
+.drivers {
+width: 100%;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.driver {
+    margin: 20px;
+    flex: 1;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+
+  .driver img {
+    width: 100%;
+    height: auto;
+  }
