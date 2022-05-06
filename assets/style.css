@@ -12,7 +12,7 @@
   body {
       margin: 0;
       background: white;
-      font-family: 'Work Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
       min-height: 100vh;
 
@@ -213,11 +213,11 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
     margin-top: auto;
   }
 
  footer h2 {
     color: white;
-    text-decoration: none;
     font-size: 1rem;
  }
