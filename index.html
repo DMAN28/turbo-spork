@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+
   <title>F1 Haas fan site for the real F1 fans</title>
 </head>
 
@@ -43,25 +46,30 @@
   <main>
     <section id="the-drivers">
       <div class="flex-row">
-        <h2 class="section-title primary-border">Team News</h2>
+        <h2 class="section-title primary-border">Real time tweet stream</h2>
       </div>
     </section>
     <section>
       <h2> 
-        <span></span>
-      </h2>
-    </section>
-    <section>
-      <h2> 
-        <span></span>
-      </h2>
-    </section>
-    <section>
-      <h2> 
-        <span></span>
+        <span>
+          <script>
+const socket = io()
+
+socket.on('connect', () => {
+    console.log('connected to server')
+})
+
+socket.on('tweet', (tweet) => {
+  console.log('tweet')
+})
+
+          </script>
+        </span>
       </h2>
     </section>
   </main>
+
+
   <!-- "meet the drivers" section -->
   <section id="the-drivers">
     <div class="flex-row">
