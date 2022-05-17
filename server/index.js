@@ -24,7 +24,7 @@ app.get('/',(req, res) => {
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 
 const streamURL =
-'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
+'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics'
 
 
 const rules = [{ value: 'haas racing' }]
@@ -79,7 +79,7 @@ async function deleteRules(rules) {
             Authorization: `Bearer ${TOKEN}`,
         },
     })
-    
+
     return response.body 
 }
 
@@ -88,14 +88,14 @@ async function deleteRules(rules) {
 function streamTweets(socket) {
     const stream = needle.get(streamURL, {
         headers: {
-            Authorization: `Bearer ${TOKEN}`,
-        },
+            Authorization: `Bearer ${TOKEN}`
+        }
     })
 
     stream.on('data', (data) => {
         try {
             const json = JSON.parse(data)
-            //console.log(json)
+            console.log(json)
 
             socket.emit('tweet', json)
         } catch (error) {}
