@@ -24,10 +24,10 @@ app.get('/',(req, res) => {
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 
 const streamURL =
-'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics'
+'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
 
 
-const rules = [{ value: 'haas racing' }]
+const rules = [{ value: 'haas racing' },{ value: 'kevin magnussen' },{ value: 'mick schumacher' },{ value: 'f1 grand prix' },{ value: '#SpanishGP' }]
 
 //get stream rules
 
@@ -59,12 +59,13 @@ async function setRules() {
 
 
 
-
+// async function that deletes rules from data base. Start by check if the data is and array.
 async function deleteRules(rules) {
     if (!Array.isArray(rules.data)) {
         return null
     }
 
+// It then creates creates a map function to iterate through each rule in the list of rules and assigns a unique ID from each rule in the data object.The data object contains a single key-value pair that deletes all of the rules with their respective id's in it.
     const ids = rules.data.map((rule) => rule.id)
 
     const data = {
@@ -72,7 +73,7 @@ async function deleteRules(rules) {
             ids: ids,
         },
     }
-
+// The code then sends a request to needle's post endpoint with the following parameters: rulesURL: https://api-needle.com/v2/rules data: { delete: { ids: ids, } }
     const response = await needle('post', rulesURL, data, {
         headers: {
             'content-type': 'application/json',
@@ -84,7 +85,7 @@ async function deleteRules(rules) {
 }
 
 
-
+//This needle object is used to connect to twitter API retrieving tweets. It then creates a new stream object which will be used for reading tweets from the stream. I then it sets up headers that are required for connecting to the Twitter API with authorization token of "Bearer TOKEN".  
 function streamTweets(socket) {
     const stream = needle.get(streamURL, {
         headers: {
