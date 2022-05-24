@@ -203,6 +203,21 @@ nav a:hover {
     nav a:hover::before {
         transform: scale(1, 1);
     }
+/********** TIMELINE STYLES  **************************/
+.timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+}
+
+.timeline ul li {
+    
+}
+
 }
 
 /********** FOOTER STYLES  **************************/
