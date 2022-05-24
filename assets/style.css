@@ -215,9 +215,37 @@ nav a:hover {
 }
 
 .timeline ul li {
-    
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+}
+.timeline ul li:nth-child(odd){
+float: left;
+clear: right;
+transform: translateX(-30px)
+}
+.timeline ul li:nth-child(even){
+    float: right;
+    clear: left;
 }
 
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    top: 0;
+}
+.timeline ul li:nth-child(odd)::after{
+    transform: translate(50%, -50%);
+    right:-14px;
+}
+.timeline ul li:nth-child(even)::after{
+    transform: translate(50%, -50%);
+    left:-36px;
+}
 }
 
 /********** FOOTER STYLES  **************************/
@@ -267,12 +295,18 @@ footer h2 {
     line-height: 2;
 }
 
-.driver-name {
-    text-align: center;
+.driver-bio p {
+    font-size: 1rem;
 }
 
 .driver-bio h3 {
     font-size: 2rem;
+}
+
+.driver-bio h4 {
+    font-weight: lighter;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 .driver-flag img {
@@ -333,7 +367,15 @@ footer h2 {
 margin-bottom: 0;
 }
 
-timeline-content h3 {
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
 }
-
+.timeline-content p {
+    font-size: .8rem;
+    font-weight: 100;
+    line-height: 30px;
+}
 
