@@ -283,3 +283,42 @@ footer h2 {
 .primary-border {
     border-color: var(--secondary-color);
 }
+
+/********** TIMELINE STYLES  **************************/
+
+.time-container {
+    min-width: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+ list-style: none;
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color : white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+margin-bottom: 0;
+}
+
+timeline-content h3 {
+}
+
+
