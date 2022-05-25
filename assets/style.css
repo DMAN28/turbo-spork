@@ -266,6 +266,24 @@ footer h2 {
     font-size: 1rem;
 }
 
+footer div {
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer div {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer i {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+    z-index: 9999;
+  }
+
 
 
 /********** Driver profile STYLES  **************************/
