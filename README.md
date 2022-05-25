@@ -15,6 +15,9 @@ A Haas fan site to allow users to follow their favorite team race by race.
 ## Description
 
 ### Preview
+![image](https://user-images.githubusercontent.com/93042669/170182411-12609a27-b995-4ea2-87ca-6a1e0d4dbab6.png)
+![image](https://user-images.githubusercontent.com/93042669/170182555-560571b7-073d-404c-a349-f66ba48dc394.png)
+![image](https://user-images.githubusercontent.com/93042669/170182681-18fb7dd7-26d2-4e6c-b5c9-53ed48f54429.png)
 
 
 This application is deployed at 
