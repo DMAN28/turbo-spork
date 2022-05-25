@@ -246,6 +246,15 @@ transform: translateX(-30px)
     transform: translate(50%, -50%);
     left:-36px;
 }
+
+.timeline ul li:hover:after{
+    background-color: var(--primary-color);
+}
+
+.timeline-content .date {
+    position: absolute;
+    top: -30px;
+}
 }
 
 /********** FOOTER STYLES  **************************/
@@ -376,7 +385,7 @@ footer div {
 .timeline ul li{
     padding: 20px;
     background-color: var(--secondary-color);
-    color : white;
+    color: var(--tertiary-color);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -396,4 +405,10 @@ margin-bottom: 0;
     font-weight: 100;
     line-height: 30px;
 }
-
+ .timeline-content .date{
+     font-size: .8rem;
+     font-weight: 400;
+     margin-bottom: 10px;
+     letter-spacing: 2px;
+     color: var(--secondary-color);
+ }
