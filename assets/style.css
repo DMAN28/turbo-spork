@@ -1,25 +1,30 @@
 :root {
     --primary-color: #ed1a3b;
     --secondary-color: #3c3b6e;
+    --tertiary-color: white;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
+}
 
- 
-  
-  body {
-      margin: 0;
-      background: white;
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 400;
-      min-height: 100vh;
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-      display: flex;
-      flex-direction: column;
-  }
+body {
+    margin: 0;
+    background: var(--tertiary-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /********** HEADER / NAV BAR STYLES  **************************/
 
@@ -37,18 +42,14 @@ header {
 }
 
 header h1 {
-    color: white;
+    color: var(--tertiary-color);
     text-decoration: none;
     font-size: 1.5rem;
     text-transform: uppercase;
-    
-}
-
-img { 
-    max-width: 80px;
-    max-height: 50px;
 
 }
+
+
 
 /********** HEADER / NAV BAR FUNCTIONALITY  **************************/
 
@@ -76,12 +77,12 @@ img {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
     display: block;
-    background: white;
+    background: var(--tertiary-color);
     height: 2px;
     width: 2em;
     border-radius: 2px;
     position: relative;
-} 
+}
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -122,7 +123,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--tertiary-color);
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
@@ -202,6 +203,58 @@ nav a:hover {
     nav a:hover::before {
         transform: scale(1, 1);
     }
+/********** TIMELINE STYLES  **************************/
+.timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+}
+
+.timeline ul li {
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+}
+.timeline ul li:nth-child(odd){
+float: left;
+clear: right;
+transform: translateX(-30px)
+}
+.timeline ul li:nth-child(even){
+    float: right;
+    clear: left;
+}
+
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    top: 0;
+}
+.timeline ul li:nth-child(odd)::after{
+    transform: translate(50%, -50%);
+    right:-14px;
+}
+.timeline ul li:nth-child(even)::after{
+    transform: translate(50%, -50%);
+    left:-36px;
+}
+
+.timeline ul li:hover:after{
+    background-color: var(--primary-color);
+}
+
+.timeline-content .date {
+    position: absolute;
+    top: -30px;
+}
 }
 
 /********** FOOTER STYLES  **************************/
@@ -213,11 +266,149 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
     margin-top: auto;
+}
+
+footer h2 {
+    color: var(--tertiary-color);
+    font-size: 1rem;
+}
+
+footer div {
+    line-height: 1.5;
+    text-align: right;
   }
 
- footer h2 {
-    color: white;
-    text-decoration: none;
+  footer div {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer i {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+    z-index: 9999;
+  }
+
+
+
+/********** Driver profile STYLES  **************************/
+
+.drivers {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.driver {
+    margin: 20px;
+    flex: 1;
+    background: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+
+.driver img {
+    width: 100%;
+}
+
+.driver-bio {
+    padding: 25px;
+    line-height: 2;
+}
+
+.driver-bio p {
     font-size: 1rem;
+}
+
+.driver-bio h3 {
+    font-size: 2rem;
+}
+
+.driver-bio h4 {
+    font-weight: lighter;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.driver-flag img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.section-title {
+    font-size: 2rem;
+    border-bottom: .18rem solid;
+    color: var(--secondary-color);
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 25%;
+}
+
+.primary-border {
+    border-color: var(--secondary-color);
+}
+
+/********** TIMELINE STYLES  **************************/
+
+.time-container {
+    min-width: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+ list-style: none;
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+margin-bottom: 0;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline-content p {
+    font-size: .8rem;
+    font-weight: 100;
+    line-height: 30px;
+}
+ .timeline-content .date{
+     font-size: .8rem;
+     font-weight: 400;
+     margin-bottom: 10px;
+     letter-spacing: 2px;
+     color: var(--secondary-color);
  }
