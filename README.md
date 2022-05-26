@@ -17,6 +17,7 @@ A Haas fan site to allow users to follow their favorite team race by race.
 ### Preview
 
 
+
 This application is deployed at 
 
 Haas fan site was created to share F1 experience with Haas fans. It is built for people who enjoy to watch F1 but may not have all the time in the world to follow their team intently.

@@ -27,9 +27,9 @@ const streamURL =
 'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
 
 
-const rules = [{ value: 'haas racing' },{ value: 'kevin magnussen' },{ value: 'mick schumacher' },{ value: 'f1 grand prix' },{ value: '#SpanishGP' }]
+const rules = [{ value: 'haas racing' },{ value: 'kevin magnussen' },{ value: 'mick schumacher' },{ value: 'f1 grand prix' },{ value: '#MonacoGP' }]
 
-//get stream rules
+//get stream rules #MonacoGP
 
 // async function called getRules, which is passed in the URL of the needle service and an object with headers that are required for authorization purposes.
 async function getRules() {
