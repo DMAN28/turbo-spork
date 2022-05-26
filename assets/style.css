@@ -144,6 +144,9 @@ nav a:hover {
 }
 
 
+
+
+
 @media screen and (min-width: 800px) {
     .nav-toggle-label {
         display: none;
@@ -202,7 +205,10 @@ nav a:hover {
 
     nav a:hover::before {
         transform: scale(1, 1);
+        
     }
+
+    
 /********** TIMELINE STYLES  **************************/
 .timeline::before{
     content: '';
@@ -291,7 +297,7 @@ footer div {
     line-height: 1.5;
     text-align: right;
     z-index: 9999;
-  }
+}
 
 
 
@@ -368,6 +374,7 @@ footer div {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 100px 0;
 }
 
 .timeline {
@@ -412,3 +419,36 @@ margin-bottom: 0;
      letter-spacing: 2px;
      color: var(--secondary-color);
  }
+
+ /********** FOOTER STYLES  **************************/
+
+footer {
+    background: var(--primary-color);
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: auto;
+}
+
+footer h2 {
+    color: var(--tertiary-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+  footer div {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer i {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: right;
+    z-index: 9999;
+  }
