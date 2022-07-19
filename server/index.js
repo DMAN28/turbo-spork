@@ -27,7 +27,8 @@ const streamURL =
 'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
 
 
-const rules = [{ value: 'haas racing' },{ value: 'kevin magnussen' },{ value: 'mick schumacher' },{ value: 'f1 grand prix' },{ value: '#SpanishGP' }]
+const rules = [{ value: 'haas racing' },{ value: 'kevin magnussen' },{ value: 'mick schumacher' },{ value: 'f1 grand prix' },{ value: '#HungarianGP' },{ value: '#SpanishGP' },
+{ value: '#FrenchGP' },{ value: '#BelgianGP' }]
 
 //get stream rules
 
